@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaizi Here | Official Portfolio</title>
+<meta name="description" content="Official portfolio of Shaizi Here — Software Engineer, Social Media Expert, Web Developer and Digital Creator. Explore projects, skills, digital expertise and contact information.">
+<meta name="author" content="Shaizi Here">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Shaizi Here | Software Engineer &amp; Social Media Expert">
+<meta property="og:description" content="Official portfolio of Shaizi Here — Software Engineer, Social Media Expert, Web Developer and Digital Creator.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourdomain.com/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Shaizi Here",
+  "url": "https://yourdomain.com/",
+  "email": "mailto:shaiziishere@gmail.com",
+  "telephone": "03253311331",
+  "jobTitle": ["Software Engineer", "Social Media Expert", "Digital Creator"],
+  "description": "Shaizi Here is a Software Engineer and Social Media Expert focused on technology, web development, digital experiences, social media strategy, and creative content.",
+  "knowsAbout": ["Software Development", "Web Development", "Social Media Strategy", "Content Creation", "UI/UX", "Digital Branding"]
+}
+</script>
+
+<style>
+  :root{
+    --ink: #0F1319;
+    --ink-soft: #161C25;
+    --paper: #F7F5F0;
+    --paper-dim: #EDEAE2;
+    --code: #4DE8C7;      /* engineering accent */
+    --code-dim: #2B9C87;
+    --signal: #FF5C7A;    /* social/creative accent */
+    --signal-dim: #C6425C;
+    --ink-text: #E8E9ED;
+    --ink-text-dim: #9AA1AC;
+    --line: rgba(255,255,255,0.09);
+    --line-strong: rgba(255,255,255,0.16);
+    --paper-text: #14171C;
+    --paper-text-dim: #5B5F68;
+    --paper-line: rgba(15,19,25,0.10);
+    --radius: 14px;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --seam: linear-gradient(90deg, var(--code), var(--signal));
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background: var(--ink);
+    color: var(--ink-text);
+    font-family: var(--font-body);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; text-decoration:none; }
+  ul{ list-style:none; }
+  section{ position:relative; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
+  }
+
+  :focus-visible{ outline:2px solid var(--code); outline-offset:3px; border-radius:4px; }
+
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 32px; }
+  @media (max-width:640px){ .wrap{ padding:0 20px; } }
+
+  .eyebrow{
+    font-family: var(--font-mono);
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color: var(--ink-text-dim);
+    display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{
+    content:''; width:22px; height:1px; background:var(--seam);
+  }
+
+  h1,h2,h3,h4{ font-family:var(--font-display); font-weight:600; letter-spacing:-0.01em; }
+
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:14px 26px; border-radius:999px;
+    font-family:var(--font-mono); font-size:13.5px; letter-spacing:0.02em;
+    cursor:pointer; border:1px solid transparent; transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease, border-color .25s ease;
+  }
+  .btn-primary{
+    background:var(--seam); color:#0B0F14; font-weight:600;
+  }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 10px 30px -8px rgba(77,232,199,0.45); }
+  .btn-ghost{
+    border-color:var(--line-strong); color:var(--ink-text);
+  }
+  .btn-ghost:hover{ border-color:var(--code); color:var(--code); transform:translateY(-2px); }
+
+  /* ---------- NAV ---------- */
+  header.site-nav{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(15,19,25,0.72); backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{ display:flex; align-items:center; justify-content:space-between; padding:18px 32px; max-width:1180px; margin:0 auto; }
+  .nav-logo{ font-family:var(--font-display); font-weight:700; font-size:18px; letter-spacing:-0.02em; }
+  .nav-logo span{ color:var(--code); }
+  .nav-links{ display:flex; gap:32px; font-family:var(--font-mono); font-size:13px; letter-spacing:0.02em; }
+  .nav-links a{ position:relative; color:var(--ink-text-dim); transition:color .2s ease; padding-bottom:4px; }
+  .nav-links a::after{
+    content:''; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--seam); transition:width .3s ease;
+  }
+  .nav-links a:hover{ color:var(--ink-text); }
+  .nav-links a:hover::after{ width:100%; }
+  .nav-cta{ display:flex; gap:10px; }
+  @media (max-width:860px){ .nav-links{ display:none; } }
+  @media (max-width:560px){ .nav-cta .btn-ghost{ display:none; } }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100vh; display:flex; align-items:center;
+    padding:150px 0 90px; position:relative;
+    background:
+      radial-gradient(600px 400px at 12% 20%, rgba(77,232,199,0.14), transparent 60%),
+      radial-gradient(600px 400px at 88% 30%, rgba(255,92,122,0.14), transparent 60%);
+  }
+  .hero-grid{
+    display:grid; grid-template-columns: 1fr 1fr; gap:60px; align-items:center;
+  }
+  @media (max-width:900px){ .hero-grid{ grid-template-columns:1fr; gap:56px; } }
+
+  .hero-badge{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--font-mono); font-size:12px; letter-spacing:0.06em;
+    padding:8px 14px; border-radius:999px; border:1px solid var(--line-strong);
+    color:var(--ink-text-dim); margin-bottom:26px;
+  }
+  .hero-badge .dot{ width:6px; height:6px; border-radius:50%; background:var(--seam); }
+
+  .hero h1{
+    font-size:clamp(40px, 6vw, 68px); line-height:1.02; margin-bottom:22px;
+  }
+  .hero h1 .accent{
+    background:var(--seam); -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+
+  .role-line{
+    font-family:var(--font-mono); font-size:clamp(15px,2vw,19px); color:var(--ink-text-dim);
+    height:28px; overflow:hidden; margin-bottom:26px; display:flex; align-items:center;
+  }
+  .role-line #role-rotator{ color:var(--code); border-right:2px solid var(--code); padding-right:4px; }
+
+  .hero-intro{
+    font-size:16.5px; color:var(--ink-text-dim); max-width:520px; margin-bottom:36px;
+  }
+  .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; }
+
+  /* Hero visual: seam / convergence */
+  .hero-visual{
+    position:relative; display:flex; align-items:center; justify-content:center;
+    min-height:420px;
+  }
+  .hv-frame{
+    position:relative; width:280px; height:340px; border-radius:20px; overflow:hidden;
+    border:1px solid var(--line-strong);
+    box-shadow:0 30px 70px -20px rgba(0,0,0,0.6);
+  }
+  .hv-frame img{ width:100%; height:100%; object-fit:cover; filter:grayscale(15%) contrast(1.05); }
+  .hv-frame::after{
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(180deg, transparent 55%, rgba(15,19,25,0.85) 100%);
+  }
+  .hv-tag{
+    position:absolute; bottom:16px; left:16px; right:16px; z-index:2;
+    font-family:var(--font-mono); font-size:11.5px; color:var(--ink-text); letter-spacing:0.04em;
+  }
+  .hv-side{
+    position:absolute; top:50%; transform:translateY(-50%);
+    font-family:var(--font-mono); font-size:13px; letter-spacing:0.08em; text-transform:uppercase;
+    writing-mode:vertical-rl;
+    padding:16px 10px; border-radius:10px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .hv-side.left{ left:-14px; color:var(--code); border:1px solid rgba(77,232,199,0.35); background:rgba(77,232,199,0.06); }
+  .hv-side.right{ right:-14px; color:var(--signal); border:1px solid rgba(255,92,122,0.35); background:rgba(255,92,122,0.06); }
+  @media (max-width:900px){ .hv-side{ display:none; } }
+  .hv-seam{
+    position:absolute; top:0; bottom:0; left:50%; width:1px;
+    background:var(--seam); opacity:0.5; filter:blur(0.4px);
+  }
+  .hv-particle{
+    position:absolute; width:5px; height:5px; border-radius:50%;
+    animation: drift 6s ease-in-out infinite;
+  }
+  @keyframes drift{
+    0%,100%{ transform:translateY(0) translateX(0); opacity:0.5; }
+    50%{ transform:translateY(-18px) translateX(6px); opacity:1; }
+  }
+
+  /* ---------- SECTION HEADERS ---------- */
+  .section{ padding:120px 0; }
+  @media (max-width:640px){ .section{ padding:80px 0; } }
+  .section-head{ max-width:640px; margin-bottom:56px; }
+  .section-head h2{ font-size:clamp(30px,4vw,44px); margin-top:14px; line-height:1.1; }
+  .section-head p{ color:var(--ink-text-dim); margin-top:16px; font-size:16px; max-width:560px; }
+
+  .light{ background:var(--paper); color:var(--paper-text); }
+  .light .eyebrow{ color:var(--paper-text-dim); }
+  .light .section-head p{ color:var(--paper-text-dim); }
+
+  /* ---------- INTRO STATEMENT ---------- */
+  .intro-statement{
+    font-family:var(--font-display); font-weight:500;
+    font-size:clamp(22px,3vw,32px); line-height:1.4; color:var(--ink-text);
+    max-width:880px;
+  }
+  .intro-statement .hl-code{ color:var(--code); }
+  .intro-statement .hl-signal{ color:var(--signal); }
+  .tagline-row{
+    margin-top:44px; display:flex; gap:14px; flex-wrap:wrap;
+  }
+  .tagline-chip{
+    font-family:var(--font-mono); font-size:13px; padding:10px 18px; border-radius:999px;
+    border:1px solid var(--line-strong); color:var(--ink-text-dim);
+  }
+
+  /* ---------- EXPERTISE CARDS ---------- */
+  .expertise-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:28px;
+  }
+  @media (max-width:820px){ .expertise-grid{ grid-template-columns:1fr; } }
+  .expertise-card{
+    background:var(--ink-soft); border:1px solid var(--line); border-radius:var(--radius);
+    padding:40px; position:relative; overflow:hidden;
+    transition:transform .3s ease, border-color .3s ease;
+  }
+  .expertise-card:hover{ transform:translateY(-6px); }
+  .expertise-card.eng{ border-top:2px solid var(--code); }
+  .expertise-card.social{ border-top:2px solid var(--signal); }
+  .exp-icon{
+    width:52px; height:52px; border-radius:12px; display:flex; align-items:center; justify-content:center;
+    margin-bottom:26px;
+  }
+  .expertise-card.eng .exp-icon{ background:rgba(77,232,199,0.12); color:var(--code); }
+  .expertise-card.social .exp-icon{ background:rgba(255,92,122,0.12); color:var(--signal); }
+  .expertise-card h3{ font-size:22px; margin-bottom:14px; }
+  .expertise-card p{ color:var(--ink-text-dim); font-size:15px; margin-bottom:26px; }
+  .tag-list{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:30px; }
+  .tag{
+    font-family:var(--font-mono); font-size:12px; padding:6px 12px; border-radius:6px;
+    background:rgba(255,255,255,0.04); border:1px solid var(--line); color:var(--ink-text-dim);
+  }
+  .card-link{ font-family:var(--font-mono); font-size:13px; display:inline-flex; align-items:center; gap:8px; }
+  .expertise-card.eng .card-link{ color:var(--code); }
+  .expertise-card.social .card-link{ color:var(--signal); }
+  .card-link .arrow{ transition:transform .25s ease; }
+  .card-link:hover .arrow{ transform:translateX(4px); }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{
+    display:grid; grid-template-columns: 0.85fr 1.15fr; gap:70px; align-items:center;
+  }
+  @media (max-width:900px){ .about-grid{ grid-template-columns:1fr; gap:44px; } }
+  .about-photo{
+    position:relative; border-radius:18px; overflow:hidden; border:1px solid var(--line-strong);
+  }
+  .about-photo img{ width:100%; aspect-ratio:4/5; object-fit:cover; }
+  .about-sub{ font-family:var(--font-mono); font-size:14px; color:var(--code); margin:14px 0 20px; letter-spacing:0.03em; }
+  .about-text p{ color:var(--ink-text-dim); margin-bottom:18px; font-size:16px; }
+  .about-text p:last-child{ margin-bottom:0; }
+
+  /* ---------- SKILLS ---------- */
+  .skills-split{ display:grid; grid-template-columns:1fr 1fr; gap:60px; }
+  @media (max-width:820px){ .skills-split{ grid-template-columns:1fr; gap:48px; } }
+  .skills-col h3{
+    font-family:var(--font-mono); font-size:13px; letter-spacing:0.08em; text-transform:uppercase;
+    margin-bottom:22px; display:flex; align-items:center; gap:10px;
+  }
+  .skills-col.eng h3{ color:var(--code); }
+  .skills-col.social h3{ color:var(--signal); }
+  .skill-cards{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .skill-card{
+    background:var(--ink-soft); border:1px solid var(--line); border-radius:10px;
+    padding:16px 16px; font-size:13.5px; color:var(--ink-text);
+    transition:transform .25s ease, border-color .25s ease, background .25s ease;
+  }
+  .skills-col.eng .skill-card:hover{ border-color:var(--code); transform:translateY(-3px); }
+  .skills-col.social .skill-card:hover{ border-color:var(--signal); transform:translateY(-3px); }
+
+  /* ---------- SERVICES ---------- */
+  .services-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  @media (max-width:900px){ .services-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:600px){ .services-grid{ grid-template-columns:1fr; } }
+  .service-card{
+    background:#fff; border:1px solid var(--paper-line); border-radius:var(--radius);
+    padding:32px; transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .service-card:hover{ transform:translateY(-5px); box-shadow:0 20px 40px -18px rgba(15,19,25,0.18); }
+  .service-num{ font-family:var(--font-mono); font-size:12px; color:var(--paper-text-dim); margin-bottom:16px; }
+  .service-card h3{ font-size:19px; margin-bottom:10px; }
+  .service-card p{ font-size:14.5px; color:var(--paper-text-dim); }
+
+  /* ---------- PROJECTS ---------- */
+  .filter-tabs{ display:flex; gap:10px; margin-bottom:44px; flex-wrap:wrap; }
+  .filter-tab{
+    font-family:var(--font-mono); font-size:13px; padding:10px 18px; border-radius:999px;
+    border:1px solid var(--line-strong); color:var(--ink-text-dim); cursor:pointer; background:transparent;
+    transition:all .25s ease;
+  }
+  .filter-tab.active, .filter-tab:hover{ border-color:var(--code); color:var(--ink-text); background:rgba(77,232,199,0.08); }
+  .projects-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  @media (max-width:900px){ .projects-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:640px){ .projects-grid{ grid-template-columns:1fr; } }
+  .project-card{
+    background:var(--ink-soft); border:1px solid var(--line); border-radius:var(--radius);
+    padding:28px; transition:transform .3s ease, border-color .3s ease;
+  }
+  .project-card:hover{ transform:translateY(-5px); border-color:var(--line-strong); }
+  .project-card .cat{
+    font-family:var(--font-mono); font-size:11px; letter-spacing:0.06em; text-transform:uppercase;
+    display:inline-block; padding:4px 10px; border-radius:999px; margin-bottom:16px;
+  }
+  .project-card[data-cat="software"] .cat{ background:rgba(77,232,199,0.12); color:var(--code); }
+  .project-card[data-cat="web"] .cat{ background:rgba(255,255,255,0.08); color:var(--ink-text); }
+  .project-card[data-cat="social"] .cat{ background:rgba(255,92,122,0.12); color:var(--signal); }
+  .project-card h3{ font-size:18px; margin-bottom:10px; }
+  .project-card p{ font-size:14px; color:var(--ink-text-dim); margin-bottom:14px; }
+  .concept-flag{ font-family:var(--font-mono); font-size:11px; color:var(--ink-text-dim); border-top:1px dashed var(--line); padding-top:12px; margin-top:6px; }
+  .hidden-project{ display:none; }
+
+  /* ---------- PROFILE CARD ---------- */
+  .profile-card{
+    background:var(--ink-soft); border:1px solid var(--line-strong); border-radius:20px;
+    padding:44px; display:grid; grid-template-columns:auto 1fr; gap:36px; align-items:center;
+    position:relative; overflow:hidden;
+  }
+  .profile-card::before{
+    content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--seam);
+  }
+  @media (max-width:700px){ .profile-card{ grid-template-columns:1fr; text-align:center; } }
+  .profile-avatar{
+    width:120px; height:120px; border-radius:50%; overflow:hidden; border:2px solid var(--line-strong); margin:0 auto;
+  }
+  .profile-avatar img{ width:100%; height:100%; object-fit:cover; }
+  .profile-name{ font-size:26px; margin-bottom:6px; }
+  .profile-role{ font-family:var(--font-mono); font-size:13.5px; color:var(--ink-text-dim); margin-bottom:20px; }
+  .profile-pillars{ display:flex; gap:10px; flex-wrap:wrap; }
+  @media (max-width:700px){ .profile-pillars{ justify-content:center; } }
+  .pillar{
+    display:flex; align-items:center; gap:8px; font-family:var(--font-mono); font-size:12.5px;
+    padding:8px 14px; border-radius:999px; border:1px solid var(--line); color:var(--ink-text-dim);
+  }
+  .pillar .ic{ width:6px; height:6px; border-radius:50%; background:var(--seam); }
+
+  /* ---------- CONTACT ---------- */
+  .contact-section{
+    background:linear-gradient(180deg, var(--ink) 0%, var(--ink-soft) 100%);
+    text-align:center;
+  }
+  .contact-section .section-head{ margin:0 auto 40px; text-align:center; }
+  .contact-section .eyebrow{ justify-content:center; }
+  .contact-links{ display:flex; gap:18px; justify-content:center; flex-wrap:wrap; margin-top:40px; }
+  .contact-link{
+    display:flex; align-items:center; gap:12px; padding:18px 26px; border-radius:14px;
+    border:1px solid var(--line-strong); font-family:var(--font-mono); font-size:14px;
+    transition:all .25s ease;
+  }
+  .contact-link:hover{ border-color:var(--code); background:rgba(77,232,199,0.06); transform:translateY(-3px); }
+  .contact-link .lbl{ color:var(--ink-text-dim); font-size:11px; display:block; margin-bottom:2px; text-transform:uppercase; letter-spacing:0.06em; }
+
+  /* ---------- FOOTER ---------- */
+  footer{ border-top:1px solid var(--line); padding:56px 0 34px; }
+  .footer-top{ display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:24px; margin-bottom:36px; }
+  .footer-logo{ font-family:var(--font-display); font-size:20px; font-weight:700; margin-bottom:8px; }
+  .footer-role{ font-family:var(--font-mono); font-size:12.5px; color:var(--ink-text-dim); }
+  .footer-nav{ display:flex; gap:22px; font-family:var(--font-mono); font-size:12.5px; color:var(--ink-text-dim); flex-wrap:wrap; }
+  .footer-nav a:hover{ color:var(--code); }
+  .footer-bottom{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+    padding-top:24px; border-top:1px solid var(--line);
+    font-family:var(--font-mono); font-size:11.5px; color:var(--ink-text-dim);
+  }
+
+  /* reveal on scroll */
+  .reveal{ opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">Shaizi<span>.</span></a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#projects" class="btn btn-ghost">View My Work</a>
+      <a href="#contact" class="btn btn-primary">Let's Connect</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-badge"><span class="dot"></span> Software Engineer &amp; Social Media Expert</div>
+      <h1>I'm <span class="accent">Shaizi Here</span></h1>
+      <div class="role-line"><span id="role-rotator">Software Engineer</span></div>
+      <p class="hero-intro">"I'm Shaizi Here — a Software Engineer and Social Media Expert passionate about building modern digital experiences, developing innovative software solutions, and creating engaging digital content."</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-ghost">Let's Connect</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hv-side left">Software Engineer</div>
+      <div class="hv-frame">
+        <div class="hv-seam"></div>
+        <!-- REPLACE WITH SHAIZI'S REAL PHOTO -->
+        <img src="image.png" alt="Shaizi Here — professional portrait placeholder">
+        <div class="hv-tag">Engineering Technology. Creating Digital Impact.</div>
+      </div>
+      <div class="hv-side right">Social Media Expert</div>
+      <div class="hv-particle" style="top:12%; left:20%; background:var(--code); animation-delay:0s;"></div>
+      <div class="hv-particle" style="top:70%; left:15%; background:var(--code); animation-delay:1.2s;"></div>
+      <div class="hv-particle" style="top:20%; left:82%; background:var(--signal); animation-delay:0.6s;"></div>
+      <div class="hv-particle" style="top:75%; left:80%; background:var(--signal); animation-delay:1.8s;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROFESSIONAL INTRO ================= -->
+<section class="section" id="intro">
+  <div class="wrap">
+    <div class="eyebrow reveal">Professional Introduction</div>
+    <h2 class="reveal" style="margin:14px 0 34px; font-size:clamp(28px,3.6vw,40px); max-width:760px;">Software Engineer. Social Media Expert. Digital Creator.</h2>
+    <p class="intro-statement reveal">"Shaizi Here is a <span class="hl-code">Software Engineer</span> and <span class="hl-signal">Social Media Expert</span> focused on technology, web development, digital experiences, social media strategy, and creative content. With a passion for both technology and digital media, Shaizi combines technical thinking with creative execution to turn ideas into meaningful digital experiences."</p>
+    <div class="tagline-row reveal">
+      <span class="tagline-chip">Engineering Technology. Creating Digital Impact.</span>
+      <span class="tagline-chip">Where Technology Meets Creativity.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERTISE ================= -->
+<section class="section" id="expertise">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Professional Expertise</div>
+      <h2>Two disciplines, one way of thinking.</h2>
+    </div>
+    <div class="expertise-grid">
+      <div class="expertise-card eng reveal">
+        <div class="exp-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 6L2 12l6 6M16 6l6 6-6 6"/></svg>
+        </div>
+        <h3>Software Engineering</h3>
+        <p>Designing and developing modern software and web experiences with a focus on clean interfaces, functionality, responsiveness, usability, and continuous improvement.</p>
+        <div class="tag-list">
+          <span class="tag">Software Development</span><span class="tag">Web Development</span><span class="tag">Frontend Development</span>
+          <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+          <span class="tag">Responsive Design</span><span class="tag">UI/UX</span><span class="tag">SQL</span>
+          <span class="tag">Database Concepts</span><span class="tag">Problem Solving</span><span class="tag">Data Structures &amp; Algorithms</span>
+          <span class="tag">Git &amp; GitHub</span>
+        </div>
+        <a href="#projects" class="card-link">Explore Development Work <span class="arrow">→</span></a>
+      </div>
+
+      <div class="expertise-card social reveal">
+        <div class="exp-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg>
+        </div>
+        <h3>Social Media Expertise</h3>
+        <p>Creating and optimizing digital content and social media experiences with a focus on audience engagement, creative strategy, branding, content presentation, and digital growth.</p>
+        <div class="tag-list">
+          <span class="tag">Social Media Strategy</span><span class="tag">Content Strategy</span><span class="tag">Social Media Management</span>
+          <span class="tag">Digital Branding</span><span class="tag">Content Creation</span><span class="tag">YouTube</span>
+          <span class="tag">Facebook</span><span class="tag">Instagram</span><span class="tag">Audience Engagement</span>
+          <span class="tag">SEO Basics</span><span class="tag">Digital Marketing Concepts</span><span class="tag">Trend Research</span>
+          <span class="tag">Creative Content</span>
+        </div>
+        <a href="#projects" class="card-link">Explore Digital Work <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <!-- REPLACE WITH SHAIZI'S REAL PHOTO -->
+      <img src="1.png" alt="Shaizi Here — professional portrait placeholder">
+    </div>
+    <div class="reveal">
+      <div class="eyebrow">About</div>
+      <h2 style="font-size:clamp(28px,3.6vw,40px); margin-top:14px;">About Shaizi Here</h2>
+      <div class="about-sub">Software Engineer | Social Media Expert</div>
+      <div class="about-text">
+        <p>"I'm Shaizi Here, a Software Engineer and Social Media Expert with a strong interest in technology, software development, web experiences, digital content, and online platforms. I enjoy solving technical problems, building modern digital projects, exploring new technologies, and developing creative social media ideas."</p>
+        <p>"My work combines technical knowledge with creativity — allowing me to approach digital projects from both an engineering and audience perspective."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="section" id="skills">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Skills</div>
+      <h2>What I work with.</h2>
+    </div>
+    <div class="skills-split">
+      <div class="skills-col eng reveal">
+        <h3><span style="width:8px;height:8px;border-radius:50%;background:var(--code);display:inline-block;"></span> Software Engineering</h3>
+        <div class="skill-cards">
+          <div class="skill-card">Software Engineering</div>
+          <div class="skill-card">Web Development</div>
+          <div class="skill-card">Frontend Development</div>
+          <div class="skill-card">HTML5</div>
+          <div class="skill-card">CSS3</div>
+          <div class="skill-card">JavaScript</div>
+          <div class="skill-card">Responsive Web Design</div>
+          <div class="skill-card">UI/UX</div>
+          <div class="skill-card">SQL</div>
+          <div class="skill-card">MySQL</div>
+          <div class="skill-card">Database Systems</div>
+          <div class="skill-card">Data Structures</div>
+          <div class="skill-card">Algorithms</div>
+          <div class="skill-card">Git</div>
+          <div class="skill-card">GitHub</div>
+        </div>
+      </div>
+      <div class="skills-col social reveal">
+        <h3><span style="width:8px;height:8px;border-radius:50%;background:var(--signal);display:inline-block;"></span> Social Media &amp; Digital</h3>
+        <div class="skill-cards">
+          <div class="skill-card">Social Media Management</div>
+          <div class="skill-card">Social Media Strategy</div>
+          <div class="skill-card">Content Creation</div>
+          <div class="skill-card">YouTube</div>
+          <div class="skill-card">Facebook</div>
+          <div class="skill-card">Instagram</div>
+          <div class="skill-card">Digital Branding</div>
+          <div class="skill-card">Content Strategy</div>
+          <div class="skill-card">Audience Engagement</div>
+          <div class="skill-card">SEO</div>
+          <div class="skill-card">Digital Marketing</div>
+          <div class="skill-card">Trend Analysis</div>
+          <div class="skill-card">Creative Direction</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES (light) ================= -->
+<section class="section light" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Services</div>
+      <h2>What I Do</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal"><div class="service-num">01</div><h3>Software Development</h3><p>Building modern and functional software solutions.</p></div>
+      <div class="service-card reveal"><div class="service-num">02</div><h3>Web Development</h3><p>Creating responsive and modern websites.</p></div>
+      <div class="service-card reveal"><div class="service-num">03</div><h3>UI/UX &amp; Digital Experiences</h3><p>Designing clean, intuitive and engaging interfaces.</p></div>
+      <div class="service-card reveal"><div class="service-num">04</div><h3>Social Media Management</h3><p>Helping organize and improve digital social presence.</p></div>
+      <div class="service-card reveal"><div class="service-num">05</div><h3>Content Strategy</h3><p>Planning creative and engaging content for digital platforms.</p></div>
+      <div class="service-card reveal"><div class="service-num">06</div><h3>Digital Branding</h3><p>Creating consistent and professional online identities.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section class="section" id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Projects</div>
+      <h2>Selected Work</h2>
+      <p>A mix of software builds, web experiences, and digital / social media concepts.</p>
+    </div>
+
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="software">Software</button>
+      <button class="filter-tab" data-filter="web">Web</button>
+      <button class="filter-tab" data-filter="social">Social Media</button>
+    </div>
+
+    <div class="projects-grid" id="projects-grid">
+      <div class="project-card reveal" data-cat="software"><span class="cat">Software</span><h3>Smart Parking Management System</h3><p>A system concept for tracking and managing real-time parking availability.</p></div>
+      <div class="project-card reveal" data-cat="software"><span class="cat">Software</span><h3>University Management System</h3><p>A structured system for managing student, course, and administrative records.</p></div>
+      <div class="project-card reveal" data-cat="software"><span class="cat">Software</span><h3>Flight Management System</h3><p>A software solution for handling flight scheduling and booking logic.</p></div>
+
+      <div class="project-card reveal" data-cat="web"><span class="cat">Web</span><h3>Modern Portfolio Website</h3><p>A responsive personal portfolio built with clean, modern front-end practices.</p></div>
+      <div class="project-card reveal" data-cat="web"><span class="cat">Web</span><h3>Responsive Landing Page</h3><p>A conversion-focused landing page optimized across devices.</p></div>
+      <div class="project-card reveal" data-cat="web"><span class="cat">Web</span><h3>Creative Web Experience</h3><p>An interactive front-end concept exploring layout and motion.</p>
+        <div class="concept-flag">Concept project</div>
+      </div>
+
+      <div class="project-card reveal" data-cat="social"><span class="cat">Social Media</span><h3>YouTube Channel Branding</h3><p>Visual identity concept for a YouTube channel, including layout and presentation.</p>
+        <div class="concept-flag">Sample concept</div>
+      </div>
+      <div class="project-card reveal" data-cat="social"><span class="cat">Social Media</span><h3>Social Media Content Concepts</h3><p>A set of content ideas built around engagement and platform-specific strategy.</p>
+        <div class="concept-flag">Sample concept</div>
+      </div>
+      <div class="project-card reveal" data-cat="social"><span class="cat">Social Media</span><h3>Digital Brand Identity</h3><p>A cohesive digital branding concept spanning tone, visuals, and presentation.</p>
+        <div class="concept-flag">Sample concept</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROFILE CARD ================= -->
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="profile-card reveal">
+      <div class="profile-avatar">
+        <!-- REPLACE WITH SHAIZI'S REAL PHOTO -->
+        <img src="1.png" alt="Shaizi Here">
+      </div>
+      <div>
+        <div class="profile-name">SHAIZI HERE</div>
+        <div class="profile-role">Software Engineer &amp; Social Media Expert</div>
+        <div class="profile-pillars">
+          <span class="pillar"><span class="ic"></span> Software Engineering</span>
+          <span class="pillar"><span class="ic"></span> Web Development</span>
+          <span class="pillar"><span class="ic"></span> Social Media</span>
+          <span class="pillar"><span class="ic"></span> Digital Content</span>
+          <span class="pillar"><span class="ic"></span> Creative Technology</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section contact-section" id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Contact</div>
+      <h2>Let's Build. Create. Connect.</h2>
+      <p style="margin-left:auto; margin-right:auto;">Whether it's a software project, web experience, digital idea, or social media collaboration, let's connect and turn ideas into something meaningful.</p>
+    </div>
+    <div class="contact-links reveal">
+      <a href="tel:03253311331" class="contact-link"><span><span class="lbl">Phone</span>03253311331</span></a>
+      <a href="mailto:shaiziishere@gmail.com" class="contact-link"><span><span class="lbl">Email</span>shaiziishere@gmail.com</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">SHAIZI HERE</div>
+        <div class="footer-role">Software Engineer • Social Media Expert • Digital Creator</div>
+      </div>
+      <nav class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>Shaizi Here | Official Portfolio</span>
+      <span>Shaizi Here. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Rotating role text
+  const roles = ["Software Engineer", "Social Media Expert", "Web Developer", "Digital Creator", "Technology Enthusiast"];
+  let ri = 0;
+  const rotEl = document.getElementById('role-rotator');
+  if (rotEl) {
+    setInterval(() => {
+      ri = (ri + 1) % roles.length;
+      rotEl.style.opacity = 0;
+      setTimeout(() => { rotEl.textContent = roles[ri]; rotEl.style.opacity = 1; }, 250);
+    }, 2400);
+    rotEl.style.transition = 'opacity .25s ease';
+  }
+
+  // Project filter tabs
+  const tabs = document.querySelectorAll('.filter-tab');
+  const cards = document.querySelectorAll('.project-card');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const filter = tab.dataset.filter;
+      cards.forEach(card => {
+        if (filter === 'all' || card.dataset.cat === filter) {
+          card.classList.remove('hidden-project');
+        } else {
+          card.classList.add('hidden-project');
+        }
+      });
+    });
+  });
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
